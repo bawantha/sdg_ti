@@ -48,7 +48,7 @@ class SearchCubit extends Cubit<SearchState> {
     if (selectedCountry == null) {
       return;
     } else {
-      emit(state.copyWith(selectedCountry: selectedCountry));
+      emit(state.copyWith(selectedCountry: selectedCountry,selectedState: null));
       unawaited(getStates(selectedCountry.id));
     }
   }

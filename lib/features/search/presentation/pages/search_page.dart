@@ -24,6 +24,7 @@ class SearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController _controller = TextEditingController();
     return Scaffold(
       body: BlocListener<SearchCubit, SearchState>(
         listenWhen: (previous, current) =>
@@ -55,7 +56,10 @@ class SearchView extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.9,
                     requestFocusOnTap: true,
                     label: Text(context.localizations.country),
-                    onSelected: context.read<SearchCubit>().onSelectCountry,
+                    onSelected: (CountryModel? country) {
+                      if(country != null)_controller.clear();
+                      context.read<SearchCubit>().onSelectCountry(country);
+                    },
                     dropdownMenuEntries: state.countries
                         .map<DropdownMenuEntry<CountryModel>>(
                             (CountryModel country) {
@@ -71,6 +75,7 @@ class SearchView extends StatelessWidget {
               BlocBuilder<SearchCubit, SearchState>(
                 builder: (context, state) {
                   return DropdownMenu<StateModel>(
+                    controller: _controller,
                     initialSelection: state.selectedState,
                     width: MediaQuery.of(context).size.width * 0.9,
                     requestFocusOnTap: true,
