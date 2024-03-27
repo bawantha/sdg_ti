@@ -4,12 +4,22 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:sdg_ti/config/extensions/context_extension.dart';
 import 'package:sdg_ti/config/injectable/injectable.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:sdg_ti/util/logger/sdg_log.dart';
 
 void main() async {
-  await dotenv.load(fileName: ".env");
+  await _loadEnv();
   configureDependencies();
   Bloc.observer = const AppBlocObserver();
   runApp(const SDGApp());
+}
+
+Future<void> _loadEnv() async {
+  try {
+    SDGLog.info("main", '======== Loading .env file =======');
+    await dotenv.load(fileName: ".env");
+  } catch (e) {
+    SDGLog.error('main', 'Failed to load .env file');
+  }
 }
 
 class AppBlocObserver extends BlocObserver {
