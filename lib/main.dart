@@ -1,10 +1,15 @@
 import 'package:bloc/bloc.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:sdg_ti/config/extensions/context_extension.dart';
 import 'package:sdg_ti/config/injectable/injectable.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:sdg_ti/features/search/domain/repository/search_repository.dart';
 import 'package:sdg_ti/util/logger/sdg_log.dart';
+
+import 'core/error/failure.dart';
+import 'features/search/data/models/country_model.dart';
 
 void main() async {
   await _loadEnv();
