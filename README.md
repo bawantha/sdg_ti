@@ -2,6 +2,9 @@
 
 SDG-TI is a location search app designed to demonstrate the use of Flutter for mobile app development. This document outlines the architecture of the app, key decisions made during its development, and instructions for setting up and running the app.
 
+![image](https://github.com/bawantha/sdg_ti/assets/17080593/1c7bdbc8-c7a1-4e60-871d-b3b5876a13ec)
+
+
 
 ## Getting Started
 
