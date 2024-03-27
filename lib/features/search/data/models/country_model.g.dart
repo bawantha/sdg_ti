@@ -7,7 +7,7 @@ part of 'country_model.dart';
 // **************************************************************************
 
 CountryModel _$CountryModelFromJson(Map<String, dynamic> json) => CountryModel(
-      id: json['id'] as String,
+      id: json['id'] as int,
       value: json['value'] as String,
     );
 

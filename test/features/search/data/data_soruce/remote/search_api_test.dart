@@ -27,11 +27,11 @@ void main() {
     () {
       final countries = List.generate(
         10,
-        (i) => CountryModel(id: '$i', value: 'Country $i'),
+        (i) => CountryModel(id: i, value: 'Country $i'),
       );
       final List<StateModel> states = List.generate(
         10,
-        (i) => StateModel(id: '$i', value: 'State $i'),
+        (i) => StateModel(id: i, value: 'State $i'),
       );
 
       test('.getAll Countries', () async {
