@@ -15,6 +15,5 @@ abstract class SearchApi {
   Future<List<CountryModel>> getAllCountries();
 
   @GET('/countries/{countryId}/states')
-  Future<List<StateModel>> getStatesOfCountry(
-      @Path('countryId') String countryId);
+  Future<List<StateModel>> getStatesOfCountry(@Path('countryId') int countryId);
 }

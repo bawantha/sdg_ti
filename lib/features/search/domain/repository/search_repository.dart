@@ -7,6 +7,5 @@ import '../../data/models/state_model.dart';
 abstract class SearchRepository {
   Future<Either<Failure, List<CountryModel>>> getAllCountries();
 
-  Future<Either<Failure, List<StateModel>>> getStatesOfCountry(
-      String countryId);
+  Future<Either<Failure, List<StateModel>>> getStatesOfCountry(int countryId);
 }

@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:sdg_ti/config/extensions/context_extension.dart';
 import 'package:sdg_ti/config/injectable/injectable.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:sdg_ti/util/logger/sdg_log.dart';

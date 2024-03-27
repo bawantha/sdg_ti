@@ -17,6 +17,7 @@ final class SearchRepositoryImpl extends SearchRepository {
   final SearchApi api;
 
   SearchRepositoryImpl(this.api);
+
   @override
   Future<Either<Failure, List<CountryModel>>> getAllCountries() async {
     try {
@@ -30,7 +31,7 @@ final class SearchRepositoryImpl extends SearchRepository {
 
   @override
   Future<Either<Failure, List<StateModel>>> getStatesOfCountry(
-      String countryId) async {
+      int countryId) async {
     try {
       final states = await api.getStatesOfCountry(countryId);
       return right(states);

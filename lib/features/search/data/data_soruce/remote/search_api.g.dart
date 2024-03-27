@@ -48,7 +48,7 @@ class _SearchApi implements SearchApi {
   }
 
   @override
-  Future<List<StateModel>> getStatesOfCountry(String countryId) async {
+  Future<List<StateModel>> getStatesOfCountry(int countryId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
