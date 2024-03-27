@@ -1,15 +1,12 @@
 import 'package:bloc/bloc.dart';
-import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:sdg_ti/config/extensions/context_extension.dart';
 import 'package:sdg_ti/config/injectable/injectable.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:sdg_ti/features/search/domain/repository/search_repository.dart';
 import 'package:sdg_ti/util/logger/sdg_log.dart';
 
-import 'core/error/failure.dart';
-import 'features/search/data/models/country_model.dart';
+import 'features/search/presentation/pages/search_page.dart';
 
 void main() async {
   await _loadEnv();
@@ -52,30 +49,13 @@ class SDGApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('SDG App'),
-      ),
-      body: Center(
-        child: Text(context.localizations.helloWorld),
-      ),
+      home: const SearchPage(),
     );
   }
 }
