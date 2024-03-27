@@ -5,7 +5,7 @@ part 'country_model.g.dart';
 
 @JsonSerializable()
 class CountryModel extends Equatable {
-  final String id;
+  final int id;
   final String value;
 
   const CountryModel({required this.id, required this.value});

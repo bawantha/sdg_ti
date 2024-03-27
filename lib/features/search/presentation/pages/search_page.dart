@@ -5,19 +5,17 @@ import 'package:sdg_ti/features/search/data/models/country_model.dart';
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
 
-
 //TODO remove this line after implementing the BLOC
   static const List<CountryModel> mockCountries = [
-    CountryModel(id: '1', value: 'Country 1'),
-    CountryModel(id: '2', value: 'Country 2'),
-    CountryModel(id: '3', value: 'Country 3'),
-    CountryModel(id: '4', value: 'Country 4'),
-    CountryModel(id: '5', value: 'Country 5'),
-    CountryModel(id: '6', value: 'Country 6'),
-    CountryModel(id: '7', value: 'Country 7'),
-    CountryModel(id: '8', value: 'Country 8'),
-    CountryModel(id: '9', value: 'Country 9'),
-    CountryModel(id: '10', value: 'Country 10'),
+    CountryModel(id: 1, value: 'Country 1'),
+    CountryModel(id: 2, value: 'Country 2'),
+    CountryModel(id: 3, value: 'Country 3'),
+    CountryModel(id: 4, value: 'Country 4'),
+    CountryModel(id: 5, value: 'Country 5'),
+    CountryModel(id: 6, value: 'Country 6'),
+    CountryModel(id: 7, value: 'Country 7'),
+    CountryModel(id: 8, value: 'Country 8'),
+    CountryModel(id: 9, value: 'Country 9'),
   ];
 
   @override

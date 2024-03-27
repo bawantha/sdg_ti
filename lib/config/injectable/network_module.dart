@@ -10,8 +10,7 @@ abstract class NetworkModule {
   Dio dio() {
     final dio = Dio();
     dio.options.headers["x-api-key"] = dotenv.env["API_KEY"];
-    dio.options.headers["User-Agent"] = 'sgd_ti/1.0.0.1';
-    dio.options.headers["Content-Type"] = "application/json";
+    dio.options.headers["User-Agent"] = dotenv.env["USER_AGENT"];
     dio.interceptors.add(
       PrettyDioLogger(
         requestHeader: true,
