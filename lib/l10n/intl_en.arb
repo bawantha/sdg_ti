@@ -1,0 +1,6 @@
+{
+  "country":"Country",
+  "state":"State",
+  "errorMessage":"Something went wrong. !!!",
+  "retry":"Retry"
+}
