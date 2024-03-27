@@ -23,6 +23,23 @@ if (flutterVersionName == null) {
 }
 
 android {
+
+    flavorDimensions += "flavor-type"
+
+    productFlavors {
+        stage {
+            dimension "flavor-type"
+            applicationId "com.bawantha.stg.stage"
+            resValue "string", "app_name", "SDG - Stage"
+        }
+        prod {
+            dimension "flavor-type"
+            applicationId "com.bawantha.stg.prod"
+            resValue "string", "app_name", "SDG - Prod"
+        }
+    }
+
+
     namespace "com.bawanta.sdg.sdg_ti"
     compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
